@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(254,244,209);
+}
+.main{
+    width: 100%;
+    position: absolute;
+}
+.main>.lig{
+    margin-top: .2rem;
+    width: 100%;
+    animation: light 7s linear infinite;
+}
+@keyframes light {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.bao-box{
+    width: 2rem;
+    height: 1.29rem;
+    overflow: hidden;
+    background: url("img/chest.png") no-repeat center top;
+    background-size: 3rem;
+    position: absolute;
+    top: 1.5rem;
+    left: .6rem;
+}
+@keyframes shake {
+    0%{
+        transform: rotateZ(0) scale(1.5);
+    }
+    25%{
+        transform: rotateZ(25deg) scale(1.5);
+    }
+    50%{
+        transform: rotateZ(0) scale(1.5);
+    }
+    75%{
+        transform: rotateZ(-25deg) scale(1.5);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+.font{
+    font-size: .15rem;
+    text-align: center;
+    color: rgb(122,89,28);
+    font-weight: bold;
+    position: absolute;
+    top: .65rem;
+    left: .78rem;
+}
+.font>span{
+    color: rgb(239,84,16);
+}
+.font2{
+    font-size: .15rem;
+    text-align: center;
+    color: rgb(122,89,28);
+    font-weight: bold;
+    position: absolute;
+    top: 1rem;
+    left: .3rem;
+    display: none;
+    animation: font .6s linear;
+}
+@keyframes font {
+    from{
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.font2 span{
+    color: rgb(239,84,16);
+}
+.main>.txt{
+    position: absolute;
+    top: 2.8rem;
+    left: .6rem;
+    width: 2rem;
+    z-index: 0;
+}
+.main>.txt1{
+    position: absolute;
+    top: 2.8rem;
+    right: .35rem;
+    width: .5rem;
+    height: .8rem;
+    z-index: 70;
+    background: url("img/txt-tips-open.png") no-repeat -1.72rem .05rem,rgb(254,244,209);
+    background-size: 2rem;
+    animation: dong .3s linear infinite;
+}
+@keyframes dong {
+    from{
+        transform: translateY(.2rem);
+    }
+    to{
+        transform: translateY(-.2rem);
+    }
+}
+
+.bottom{
+    width: 2.5rem;
+    height: 2rem;
+    position: absolute;
+    top: 1.7rem;
+    left: .33rem;
+    background: url("img/open-bg-bottom.png") no-repeat;
+    background-size: 100% 100%;
+    display: none;
+    animation: jump 2s linear;
+}
+@keyframes jump {
+    0%{
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.bottom>img{
+    width: 100%;
+    float: left;
+    margin-top: -.1rem;
+}
+.bottom>div{
+    font-size: .2rem;
+    position: absolute;
+    top: .2rem;
+    left: .5rem;
+    overflow: hidden;
+}
+.bottom>div>span{
+    display: inline-block;
+    margin-top: .1rem;
+    color: rgb(224,100,49);
+}
+.bottom>div>img{
+    width: .7rem;
+    float: left;
+}
+.bottom>button{
+    width: 2.2rem;
+    height: .4rem;
+    font-size: .2rem;
+    text-align: center;
+    line-height: .4rem;
+    margin-left: .13rem;
+    background: rgb(255,161,1);
+    color: white;
+}

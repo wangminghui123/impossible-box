@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"/>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="js/touch-0.2.14.min.js"></script>
+    <link rel="stylesheet" href="demo.css">
+    <script>
+        $(function () {
+            function setRem() {
+                var clientWidth = $(window).width();
+                var nowRem = (clientWidth/320*100);
+                $('html').css('font-size',parseInt(nowRem,10)+'px');
+            };
+            setRem();
+            $(function () {
+                var timer;
+                $(window).on('resize',function () {
+                    clearTimeout(timer);
+                    timer = setTimeout(function () {
+                        setRem();
+                    },100);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="font">
+            <span>开心果</span>&nbsp;给你发了一个宝箱
+        </div>
+        <div class="font2">
+            <p>恭喜你，</p>
+            <p>成功领取<span> 开心果 </span>发的全民飞机大战宝箱</p>
+        </div>
+        <img src="img/light.png" alt="" class="lig">
+        <div class="bao-box"></div>
+        <img src="img/txt-tips-open.png" alt="" class="txt">
+        <div class="txt1"></div>
+    </div>
+    <div class="bottom">
+        <img src="img/open-bg-top.png" alt="">
+        <div>
+            <img src="img/chest-icon-zuan.png" alt="">
+            <span>x 1000</span>
+        </div>
+        <button>
+            查看详情并提取
+        </button>
+    </div>
+    <script src="demo.js"></script>
+</body>
+</html>
